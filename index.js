@@ -20,6 +20,7 @@ const App = {
 
         const list = document.createElement('li')
         list.textContent = form.personName.value
+        list.style.paddingLeft = '5px'
         details.appendChild(list)
 
         details.insertBefore(list, details.childNodes[0])
