@@ -19,7 +19,7 @@ h1 span {
 }
 
 section {
-  display: flex;
+  display: block;
 }
 
 section > div {
@@ -28,7 +28,7 @@ section > div {
 
 .details {
   flex-grow: 1;
-  display: flex;
+  display: block;
   flex-direction: column;
   align-items: center;
   justify-content: center;
