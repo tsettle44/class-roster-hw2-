@@ -1,10 +1,13 @@
 const App = {
-    onRemove() {
+    onRemove(ev) {
+        const target = ev.target
+        const targetDiv = target.parentNode;
 
+        targetDiv.remove()
     },
 
     onPromote() {
-
+        
     },
 
     runSubmit(ev) {
@@ -20,15 +23,15 @@ const App = {
         remove.textContent = 'Remove'
         remove.style.backgroundColor = 'red'
         remove.style.marginLeft = '5px'
-        details.appendChild(remove)
+        list.appendChild(remove)
 
         const promote = document.createElement('button')
         promote.textContent = 'Promote'
         promote.style.backgroundColor = 'green'
         promote.style.marginLeft = '5px'
-        details.appendChild(promote)
+        list.appendChild(promote)
 
-        remove.addEventListener('click', () => this.onRemove)
+        remove.addEventListener('click', (ev) => this.onRemove(ev))
         promote.addEventListener('click', () => this.onPromote())
     },
 
