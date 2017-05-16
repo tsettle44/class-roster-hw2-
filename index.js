@@ -6,8 +6,11 @@ const App = {
         targetDiv.remove()
     },
 
-    onPromote() {
-        
+    onPromote(ev) {
+        const promoteBtn = ev.target
+        const promoteDiv = promoteBtn.parentNode;
+
+        promoteDiv.style.backgroundColor = 'yellow'
     },
 
     runSubmit(ev) {
@@ -32,7 +35,7 @@ const App = {
         list.appendChild(promote)
 
         remove.addEventListener('click', (ev) => this.onRemove(ev))
-        promote.addEventListener('click', () => this.onPromote())
+        promote.addEventListener('click', (ev) => this.onPromote(ev))
     },
 
     submit() { 
