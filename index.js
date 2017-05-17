@@ -39,6 +39,8 @@ const App = {
         promote.style.float = 'right'
         list.appendChild(promote)
 
+        form.reset()
+
         remove.addEventListener('click', (ev) => this.onRemove(ev))
         promote.addEventListener('click', (ev) => this.onPromote(ev))
     },
